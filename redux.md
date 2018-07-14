@@ -164,3 +164,24 @@ const mapDispatchToProps = dispatch => {
 
 export default connect (mapStateToProps, mapDispatchToProps) (TodoList);
 ```
+
+# 7. 如下修改index.js文件
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import TodoList from './components/TodoList.component';
+import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import store from './store';
+
+const App = (
+  <Provider store={store}>
+    <TodoList />
+  </Provider>
+)
+
+ReactDOM.render(App, document.getElementById('root'));
+registerServiceWorker();
+```
