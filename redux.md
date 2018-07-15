@@ -7,6 +7,7 @@ redux是一个数据层的框架，它将所有的数据都放在Store中。
 
 # 2. 下载依赖
 ```typescript
+npm install --save redux
 npm install --save react-redux
 ```
 
